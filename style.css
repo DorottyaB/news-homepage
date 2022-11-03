@@ -128,6 +128,8 @@ p {
 .new-articles {
   background-color: var(--color-dark-bg);
   padding: 20px;
+  justify-content: space-evenly;
+  gap: 0;
 }
 
 .new-articles h2 {
@@ -301,6 +303,11 @@ p {
 
   .button:hover {
     background-color: var(--color-dark-bg);
+  }
+
+  .attribution a:link:hover,
+  .attribution a:visited:hover {
+    filter: brightness(130%);
   }
 }
 
