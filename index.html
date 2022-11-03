@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>News homepage</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo-container">
+        <img src="./assets/images/logo.svg" alt="Logo" />
+      </div>
+      <div class="hamburger-icon">
+        <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#00001A" fill-rule="evenodd">
+            <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
+            <path d="M0 0h40v3H0z" />
+          </g>
+        </svg>
+      </div>
+      <div class="overlay hidden"></div>
+      <div class="navigation hidden">
+        <div class="close-icon">
+          <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#00001A" fill-rule="evenodd">
+              <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
+              <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z" />
+            </g>
+          </svg>
+        </div>
+        <ul class="navigation-items">
+          <li class="navigation-item"><a class="link-primary" href="#">Home</a></li>
+          <li class="navigation-item"><a class="link-primary" href="#">New</a></li>
+          <li class="navigation-item"><a class="link-primary" href="#">Popular</a></li>
+          <li class="navigation-item"><a class="link-primary" href="#">Trending</a></li>
+          <li class="navigation-item"><a class="link-primary" href="#">Categories</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <article class="main-article">
+        <picture class="image-container">
+          <source srcset="./assets/images/image-web-3-desktop.jpg" media="(min-width: 1024px)" />
+          <img src="./assets/images/image-web-3-mobile.jpg" alt="" />
+        </picture>
+        <h1>The Bright Future of Web 3.0?</h1>
+        <p>
+          We dive into the next evolution of the web that claims to put the power of the platforms
+          back into the hands of the people. But is it really fulfilling its promise?
+        </p>
+        <a class="button" href="#">Read more</a>
+      </article>
+
+      <article class="new-articles">
+        <h2>New</h2>
+        <section class="section-new">
+          <a class="link-secondary" href="#">Hydrogen VS Electric Cars</a>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </section>
+        <section class="section-new">
+          <a class="link-secondary" href="#">The Downsides of AI Artistry</a>
+          <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        </section>
+        <section class="section-new">
+          <a class="link-secondary" href="#">Is VC Funding Drying Up?</a>
+          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </section>
+      </article>
+
+      <article class="top-articles">
+        <section class="section-top">
+          <div class="image-container">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="Retro PC" />
+          </div>
+          <h3>01</h3>
+          <a class="link-primary" href="#">Reviving Retro PCs</a>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </section>
+        <section class="section-top">
+          <div class="image-container">
+            <img src="./assets/images/image-top-laptops.jpg" alt="Keyboard" />
+          </div>
+          <h3>02</h3>
+          <a class="link-primary" href="#">Top 10 Laptops of 2022</a>
+          <p>Our best picks for various needs and budgets.</p>
+        </section>
+        <section class="section-top">
+          <div class="image-container">
+            <img src="./assets/images/image-gaming-growth.jpg" alt="Gaming controller" />
+          </div>
+          <h3>03</h3>
+          <a class="link-primary" href="#">The Growth of Gaming</a>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a target="_blank" href="https://github.com/DorottyaB">Dorottya</a>.
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    const mobileNav = document.querySelector('.hamburger-icon');
+    const navContainer = document.querySelector('.navigation');
+    const closeIcon = document.querySelector('.close-icon');
+    const overlay = document.querySelector('.overlay');
+    if (window.innerWidth >= 1024) {
+      mobileNav.classList.add('hidden');
+      closeIcon.classList.add('hidden');
+      navContainer.classList.remove('hidden');
+    } else {
+      mobileNav.addEventListener('click', function () {
+        navContainer.classList.remove('hidden');
+        overlay.classList.remove('hidden');
+      });
+      closeIcon.addEventListener('click', function () {
+        navContainer.classList.add('hidden');
+        overlay.classList.add('hidden');
+      });
+    }
+  </script>
+</html>
