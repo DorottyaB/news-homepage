@@ -73,26 +73,26 @@
         Coded by <a target="_blank" href="https://github.com/DorottyaB">Dorottya</a>.
       </div>
     </footer>
-  </body>
 
-  <script>
-    const mobileNav = document.querySelector('.hamburger-icon');
-    const navContainer = document.querySelector('.navigation');
-    const closeIcon = document.querySelector('.close-icon');
-    const overlay = document.querySelector('.overlay');
-    if (window.innerWidth >= 1024) {
-      mobileNav.classList.add('hidden');
-      closeIcon.classList.add('hidden');
-      navContainer.classList.remove('hidden');
-    } else {
-      mobileNav.addEventListener('click', function () {
+    <script>
+      const mobileNav = document.querySelector('.hamburger-icon');
+      const navContainer = document.querySelector('.navigation');
+      const closeIcon = document.querySelector('.close-icon');
+      const overlay = document.querySelector('.overlay');
+      if (window.innerWidth >= 1024) {
+        mobileNav.classList.add('hidden');
+        closeIcon.classList.add('hidden');
         navContainer.classList.remove('hidden');
-        overlay.classList.remove('hidden');
-      });
-      closeIcon.addEventListener('click', function () {
-        navContainer.classList.add('hidden');
-        overlay.classList.add('hidden');
-      });
-    }
-  </script>
+      } else {
+        mobileNav.addEventListener('click', function () {
+          navContainer.classList.remove('hidden');
+          overlay.classList.remove('hidden');
+        });
+        closeIcon.addEventListener('click', function () {
+          navContainer.classList.add('hidden');
+          overlay.classList.add('hidden');
+        });
+      }
+    </script>
+  </body>
 </html>
